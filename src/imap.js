@@ -125,12 +125,7 @@ export default class Imap {
         binaryType: 'arraybuffer',
         useSecureTransport: this.secureMode,
         ca: this.options.ca,
-        ws: {   
-          url: 'https://gw.tidymail.io',
-          options: {
-              upgrade: false
-          }
-        }
+        ws: this.options.ws
       });
 
       // allows certificate handling for platform w/o native tls support
